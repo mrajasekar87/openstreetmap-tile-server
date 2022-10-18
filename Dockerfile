@@ -13,7 +13,7 @@ RUN apt-get update \
 && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 
-RUN wget https://download.geofabrik.de/africa/zambia-latest.osm.pbf
+RUN wget https://download.geofabrik.de/africa/zambia-latest.osm.pbf --no-check-certificate
 RUN docker volume create openstreetmap-data
 
 EXPOSE 80 5432
